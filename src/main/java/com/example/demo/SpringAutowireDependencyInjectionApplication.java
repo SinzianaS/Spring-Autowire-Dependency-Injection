@@ -8,9 +8,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class SpringAutowireDependencyInjectionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringAutowireDependencyInjectionApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(SpringAutowireDependencyInjectionApplication.class, args);
 		
-		Alien a = new Alien();
+		Alien a = context.getBean(Alien.class);
+		
+		a.show();
 		
 	}
 

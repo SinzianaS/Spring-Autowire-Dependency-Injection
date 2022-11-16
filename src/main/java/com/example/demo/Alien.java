@@ -25,4 +25,7 @@ public class Alien {
 		this.tech = tech;
 	}
 
+	public void show() {
+		System.out.println("In show.");
+	}
 }
